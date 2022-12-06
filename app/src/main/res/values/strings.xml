@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Final</string>
+    <string name="app_name">Realizado por Laura Juliana Serrano García</string>
+    <string name="Txt1">Bienvenidos  a todos</string>
+    <string name="Btn1">Siguiente</string>
+    <string name="TxtA2">Bienvenidos a la segunda actividad</string>
+    <string name="Btn2">Regresar</string>
+    <string name="Btn3">Ir a promedio</string>
 </resources>
