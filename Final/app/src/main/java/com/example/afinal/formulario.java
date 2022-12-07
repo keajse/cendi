@@ -2,6 +2,7 @@ package com.example.afinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,23 @@ public class formulario extends AppCompatActivity {
         if(txt_nombre.getText().toString().equals("") || txt_email.getText().toString().equals("") ){
             Toast.makeText(formulario.this, "Ingresar nombre y correo", Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(formulario.this, "Vamos bien", Toast.LENGTH_LONG);
+            Intent intent = new Intent(formulario.this,GuardarActivity.class);
+            intent.putExtra("txt_nombre", txt_nombre.getText().toString());
+            intent.putExtra("txt_email", txt_email.getText().toString());
+            intent.putExtra("txt_direccion", txt_direccion.getText().toString());
+            intent.putExtra("spnDepartamento", spnDepartamento.getBaseline());
+
+            String horario = "";
+
+            if(radBtnCompleto.isChecked()){
+                horario = "Tiempo Completo";
+            }else{
+                horario = "Medio Tiempo";
+            }
+
+            intent.putExtra("horario", horario);
+            startActivity(intent);
+
         }
 
     }
