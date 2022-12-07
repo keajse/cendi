@@ -32,7 +32,10 @@ public class GuardarActivity extends AppCompatActivity {
             String direccion = miBundle.getString("direccion");
             Rec_adress.setText(direccion);
 
-            /*String tiempo = miBundle.getString("tiempo");
+            /*String departamento= miBundle.getString("departamento");
+            Rec_depart.setText(departamento);
+
+            String tiempo = miBundle.getString("tiempo");
             Rec_tiempo.setText(tiempo);*/
         }
 

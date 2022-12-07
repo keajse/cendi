@@ -56,6 +56,7 @@ public class formulario extends AppCompatActivity {
             miBundle.putString("nombre", edt_name.getText().toString());
             miBundle.putString("correo", edt_email.getText().toString());
             miBundle.putString("direccion", edt_Adress.getText().toString());
+            //miBundle.putString("departamento", String.valueOf(spinner.getBaseline()));
 
 
             intent.putExtras(miBundle);
