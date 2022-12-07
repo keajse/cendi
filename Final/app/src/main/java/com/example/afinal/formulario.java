@@ -13,9 +13,9 @@ import android.widget.Toast;
 
 public class formulario extends AppCompatActivity {
 
-    EditText txt_nombre, txt_email, txt_direccion;
-    RadioButton radBtnCompleto, radBtnMedioTiempo;
-    Spinner spnDepartamento;
+    EditText edt_name, edt_email, edt_Adress;
+    RadioButton rbtn_completo, rbtn_MedioTiempo;
+    Spinner spinner;
     Button btnEnviar;
 
     @Override
@@ -23,38 +23,44 @@ public class formulario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
-        txt_nombre = findViewById(R.id.edt_name);
-        txt_email = findViewById(R.id.edt_email);
-        txt_direccion = findViewById(R.id.edt_Adress);
-        spnDepartamento = findViewById(R.id.spinner);
+        edt_name = findViewById(R.id.edt_name);
+        edt_email = findViewById(R.id.edt_email);
+        edt_Adress = findViewById(R.id.edt_Adress);
+        spinner = findViewById(R.id.spinner);
 
-        radBtnCompleto = findViewById(R.id.rbtn_completo);
-        radBtnMedioTiempo = findViewById(R.id.rbtn_MedioTiempo);
+        rbtn_completo = findViewById(R.id.rbtn_completo);
+        rbtn_MedioTiempo = findViewById(R.id.rbtn_MedioTiempo);
 
 
     }
 
     public void guardar(View view){
 
-        if(txt_nombre.getText().toString().equals("") || txt_email.getText().toString().equals("") ){
+        if(edt_name.getText().toString().equals("") || edt_email.getText().toString().equals("") ){
             Toast.makeText(formulario.this, "Ingresar nombre y correo", Toast.LENGTH_LONG).show();
         }else{
             Intent intent = new Intent(formulario.this,GuardarActivity.class);
-            intent.putExtra("txt_nombre", txt_nombre.getText().toString());
-            intent.putExtra("txt_email", txt_email.getText().toString());
-            intent.putExtra("txt_direccion", txt_direccion.getText().toString());
-            intent.putExtra("spnDepartamento", spnDepartamento.getBaseline());
+
 
             String horario = "";
 
-            if(radBtnCompleto.isChecked()){
+            if(rbtn_completo.isChecked()){
                 horario = "Tiempo Completo";
             }else{
                 horario = "Medio Tiempo";
             }
 
             intent.putExtra("horario", horario);
+
+            Bundle miBundle = new Bundle();
+            miBundle.putString("nombre", edt_name.getText().toString());
+            miBundle.putString("correo", edt_email.getText().toString());
+            miBundle.putString("direccion", edt_Adress.getText().toString());
+
+
+            intent.putExtras(miBundle);
             startActivity(intent);
+
 
         }
 
