@@ -42,10 +42,21 @@
 
         <Button
             android:id="@+id/btn_promedio"
-            android:layout_width="wrap_content"
+            android:layout_width="100px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="irPromedio"
+            android:paddingRight="10dp"
             android:text="Ir a promedio" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="irDatos"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="DATOS" />
     </LinearLayout>
 </LinearLayout>

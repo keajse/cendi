@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cbx_depart">
+
+        <item>Sistemas</item>
+        <item>Tesoreria</item>
+        <item>Redes</item>
+        <item>Soporte técnico</item>
+
+    </string-array>
+
+</resources>

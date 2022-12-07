@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(promedio);
     }
 
+    public void irDatos (View view){
+        Intent datos = new Intent(MainActivity.this,formulario.class);
+        startActivity(datos);
+    }
+
 }
