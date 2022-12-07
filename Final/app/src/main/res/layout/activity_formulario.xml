@@ -7,6 +7,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginTop="50dp"
     android:layout_marginRight="10dp"
+    android:onClick="guardar"
     android:orientation="vertical"
     tools:context=".formulario">
 
@@ -146,6 +147,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Medio Tiempo" />
+
+            <Button
+                android:id="@+id/btn_enviarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E91E63"
+                android:onClick="guardar"
+                android:text="ENVIAR DATOS"
+                android:textSize="20sp" />
         </RadioGroup>
 
     </LinearLayout>
